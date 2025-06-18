@@ -1,4 +1,12 @@
-# React + TypeScript + Vite
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
