@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -19,7 +18,11 @@ const Footer = () => {
           </div>
 
           <div className="flex space-x-4">
-            <Button variant="ghost" size="icon" className="hover:text-purple-600">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:text-purple-600"
+            >
               <Github size={20} />
             </Button>
             <Button variant="ghost" size="icon" className="hover:text-blue-600">
@@ -28,7 +31,11 @@ const Footer = () => {
             <Button variant="ghost" size="icon" className="hover:text-blue-400">
               <Twitter size={20} />
             </Button>
-            <Button variant="ghost" size="icon" className="hover:text-green-600">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:text-green-600"
+            >
               <Mail size={20} />
             </Button>
           </div>
