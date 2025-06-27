@@ -20,22 +20,26 @@ const Hero = () => {
         <div className="text-center animate-fade-in">
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500 to-blue-600 p-1 animate-float">
-              <div className="w-full h-full rounded-full bg-background flex items-center justify-center text-6xl font-bold bg-gradient-to-br from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                JS
-              </div>
+              <div className="w-full h-full rounded-full bg-background flex items-center justify-center text-6xl font-bold bg-gradient-to-br from-purple-600 to-blue-600 bg-clip-text text-transparent"></div>
             </div>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="block text-foreground">Hi, I'm</span>
+            <span className="block text-foreground">Hello world! I'm</span>
             <span className="block bg-gradient-to-r from-purple-600 via-blue-600 to-green-500 bg-clip-text text-transparent animate-glow">
-              John Smith
+              Muhammad Ihsanuddienullah
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Full Stack Developer & UI/UX Designer crafting beautiful, functional
-            digital experiences
+            Software Engineer with 4+ years experience,
+            <br />
+            passionate about building scalable web and mobile applications.
+            <br />
+            <strong>
+              {' '}
+              Let's connect and build something amazing together!
+            </strong>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -56,23 +60,45 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center space-x-6 mb-12">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="hover:text-purple-600"
+            <a
+              href="https://www.github.com/ihsanuddienullah/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Github size={24} />
-            </Button>
-            <Button variant="ghost" size="icon" className="hover:text-blue-600">
-              <Linkedin size={24} />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="hover:text-green-600"
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-purple-600"
+              >
+                <Github size={24} />
+              </Button>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ihsanuddienullah/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Mail size={24} />
-            </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-blue-600"
+              >
+                <Linkedin size={24} />
+              </Button>
+            </a>
+            <a
+              href="mailto:ihsanuddienullah@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-green-600"
+              >
+                <Mail size={24} />
+              </Button>
+            </a>
           </div>
 
           <Button

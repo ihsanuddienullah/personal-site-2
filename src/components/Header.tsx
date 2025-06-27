@@ -9,6 +9,7 @@ const Header = () => {
   const navItems = [
     { href: '#home', label: 'Home' },
     { href: '#about', label: 'About' },
+    { href: '#experiences', label: 'Experiences' },
     { href: '#projects', label: 'Projects' },
     { href: '#skills', label: 'Skills' },
     { href: '#contact', label: 'Contact' },
@@ -26,8 +27,11 @@ const Header = () => {
     <header className="fixed top-0 w-full z-50 glass-effect border-b">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-            Portfolio
+          <div
+            className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent cursor-pointer"
+            onClick={() => scrollToSection('#home')}
+          >
+            Ihsan
           </div>
 
           {/* Desktop Navigation */}
