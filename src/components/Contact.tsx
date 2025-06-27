@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -8,25 +8,31 @@ import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formValue, setFormValue] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
   const { toast } = useToast();
 
   const contactInfo = [
     {
       icon: <Mail size={24} />,
       title: 'Email',
-      value: 'john@example.com',
-      link: 'mailto:john@example.com',
+      value: 'ihsanuddienullah@gmail.com',
+      link: 'mailto:ihsanuddienullah@gmail.com',
     },
     {
-      icon: <Phone size={24} />,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      icon: <Linkedin size={24} />,
+      title: 'LinkedIn',
+      value: 'Muhammad Ihsanuddienullah',
+      link: 'https://www.linkedin.com/in/ihsanuddienullah/',
     },
     {
       icon: <MapPin size={24} />,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Indonesia',
       link: '#',
     },
   ];
@@ -45,6 +51,15 @@ const Contact = () => {
 
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
+
+    window.location.assign(
+      `https://api.whatsapp.com/send?phone=+6282128807395&text=Hello${' '}I'm${' '}${
+        formValue.name
+      }${' '}(${formValue.email})${' '}want${' '}to${' '}${
+        formValue.subject
+      }${'.'}${' '}${formValue.message}`
+    );
+    e.preventDefault();
   };
 
   return (
@@ -99,37 +114,58 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <Input
-                      placeholder="First Name"
-                      required
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      placeholder="Last Name"
-                      required
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                </div>
+                <Input
+                  placeholder="First Name"
+                  required
+                  disabled={isSubmitting}
+                  onChange={(e) =>
+                    setFormValue({
+                      ...formValue,
+                      name: e.target.value,
+                    })
+                  }
+                  value={formValue.name}
+                />
 
                 <Input
                   type="email"
                   placeholder="Email Address"
                   required
                   disabled={isSubmitting}
+                  onChange={(e) =>
+                    setFormValue({
+                      ...formValue,
+                      email: e.target.value,
+                    })
+                  }
+                  value={formValue.email}
                 />
 
-                <Input placeholder="Subject" required disabled={isSubmitting} />
+                <Input
+                  placeholder="Subject"
+                  required
+                  disabled={isSubmitting}
+                  onChange={(e) =>
+                    setFormValue({
+                      ...formValue,
+                      subject: e.target.value,
+                    })
+                  }
+                  value={formValue.subject}
+                />
 
                 <Textarea
                   placeholder="Your Message"
                   rows={5}
                   required
                   disabled={isSubmitting}
+                  onChange={(e) =>
+                    setFormValue({
+                      ...formValue,
+                      message: e.target.value,
+                    })
+                  }
+                  value={formValue.message}
                 />
 
                 <Button
