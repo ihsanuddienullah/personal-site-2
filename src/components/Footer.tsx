@@ -10,39 +10,58 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-center md:text-left">
             <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
-              John Smith
+              Muhammad Ihsanuddienullah
             </div>
-            <p className="text-muted-foreground">
-              Full Stack Developer & UI/UX Designer
-            </p>
+            <p className="text-muted-foreground">Software Engineer</p>
           </div>
 
           <div className="flex space-x-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="hover:text-purple-600"
+            <a
+              href="https://www.github.com/ihsanuddienullah/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Github size={20} />
-            </Button>
-            <Button variant="ghost" size="icon" className="hover:text-blue-600">
-              <Linkedin size={20} />
-            </Button>
-            <Button variant="ghost" size="icon" className="hover:text-blue-400">
-              <Twitter size={20} />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="hover:text-green-600"
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-purple-600"
+              >
+                <Github size={24} />
+              </Button>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ihsanuddienullah/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Mail size={20} />
-            </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-blue-600"
+              >
+                <Linkedin size={24} />
+              </Button>
+            </a>
+            <a
+              href="mailto:ihsanuddienullah@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-green-600"
+              >
+                <Mail size={24} />
+              </Button>
+            </a>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-muted-foreground">
-          <p>&copy; {currentYear} John Smith. All rights reserved.</p>
+          <p>
+            &copy; {currentYear} Muhammad Ihsanuddienullah. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
