@@ -45,6 +45,15 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
+            <a
+              href="mailto:ihsanuddienullah@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                Hire me!
+              </Button>
+            </a>
             <ThemeToggle />
           </nav>
 
@@ -74,6 +83,9 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
+              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                Hire me!
+              </Button>
             </div>
           </nav>
         )}
