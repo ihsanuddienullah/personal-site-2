@@ -31,7 +31,7 @@ const About = () => {
               I'm a software engineer with over 4 years of experience working on
               frontend development. My journey began with a curiosity about how
               things work on the web and passionate about client-side
-              programming especially UI design and front-end environment. It has
+              programming especially UI design and frontend environment. It has
               evolved into a career dedicated to crafting beautiful UI.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
