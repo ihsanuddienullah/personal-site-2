@@ -3,10 +3,10 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
   const stats = [
-    { icon: <Code size={24} />, number: '50+', label: 'Projects Completed' },
-    { icon: <Coffee size={24} />, number: '1000+', label: 'Cups of Coffee' },
+    { icon: <Code size={24} />, number: '5+', label: 'Big Projects Completed' },
+    { icon: <Coffee size={24} />, number: '10+', label: 'Cups of Coffee' },
     { icon: <Heart size={24} />, number: '25+', label: 'Happy Clients' },
-    { icon: <Award size={24} />, number: '3+', label: 'Years Experience' },
+    { icon: <Award size={24} />, number: '4+', label: 'Years Experience' },
   ];
 
   return (
@@ -28,22 +28,18 @@ const About = () => {
           <div className="animate-fade-in">
             <h3 className="text-2xl font-semibold mb-6">My Journey</h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              I'm a passionate full-stack developer with over 3 years of
-              experience in creating digital solutions that make a difference.
-              My journey began with a curiosity about how things work on the
-              web, and it has evolved into a career dedicated to crafting
-              beautiful, functional applications.
+              I'm a software engineer with over 4 years of experience working on
+              frontend development. My journey began with a curiosity about how
+              things work on the web and passionate about client-side
+              programming especially UI design and front-end environment. It has
+              evolved into a career dedicated to crafting beautiful UI.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              I specialize in modern web technologies including React,
-              TypeScript, Node.js, and various cloud platforms. I believe in
-              writing clean, maintainable code and creating user experiences
-              that are both intuitive and delightful.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies,
-              contributing to open-source projects, or enjoying a good cup of
-              coffee while reading about the latest industry trends.
+              I specialize in frontend development using modern web technologies
+              including React, Next JS, and React Native using
+              JavaScript/TypeScript. I believe in writing clean, maintainable
+              code and creating user experiences that are both intuitive and
+              delightful.
             </p>
           </div>
 
