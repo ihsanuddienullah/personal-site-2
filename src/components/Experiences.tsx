@@ -7,15 +7,16 @@ const Experiences = () => {
     {
       title: 'Software Engineer',
       company: 'Xapiens Teknologi Indonesia',
-      location: 'Indonesia',
-      period: '2021 - Present',
+      companyUrl: 'https://xapiens.id',
+      location: 'Indonesia, Remote',
+      period: '03/2021 - Present',
       description: [
         'Developed from scratch internal service management web applications using React. Refactoring and optimizing performance through modern frontend technologies using Vite.',
-        'Maintained and enhanced existing predictive maintenance dashboard web applications, implemented new features and fixed bugs using React.',
+        'Maintained and enhanced existing predictive maintenance dashboard and charity web applications, implemented new features and fixed bugs using React.',
         'Created and maintained online learning music platform web application for global users called Muso using Next.js, React, Shadcn UI, and Tailwind CSS.',
         'Built and maintained React project infrastructure using TypeScript and Material UI for fraud detection system web application.',
         'Maintained and enhanced existing mobile applications using React Native, ensuring compatibility with both iOS and Android platforms.',
-        'Collaborated with cross-functional teams like designers and product managers to deliver high-quality software solutions.',
+        'Collaborated with cross-functional teams like designers and product managers to deliver high-quality software solutions. Gained experience in agile methodologies.',
         'Implemented responsive design and optimized performance for web applications.',
         'Participated in code reviews and contributed to team knowledge sharing.',
         'Wrote unit tests and performed debugging to ensure code quality.',
@@ -42,26 +43,40 @@ const Experiences = () => {
         'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop',
     },
     {
-      title: 'Frontend Developer',
-      company: 'Digital Innovations Inc',
-      location: 'Austin, TX',
-      period: '2021 - 2022',
+      title: 'Frontend Developer Mentor',
+      company: 'Dibimbing Academy',
+      companyUrl: 'https://dibimbing.id',
+      location: 'Indonesia, Remote',
+      period: '2022 - 2025',
       description: [
-        'Developed responsive user interfaces and improved user experience across multiple web applications. Implemented modern frontend practices and optimized performance.',
+        'Mentored 20+ students per batch on JavaScript, React, and frontend development principles.',
+        'Provided guidance on building a web application project from scratch using React and its ecosystem libraries.',
+        'Provided constructive feedback and suggestions to help students improve their skills.',
+        'Supported students in building their portfolios.',
       ],
-      technologies: ['React', 'Vue.js', 'Tailwind CSS', 'JavaScript'],
+      technologies: ['JavaScript', 'React', 'Bootstrap', 'Tailwind CSS'],
       image:
         'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop',
     },
     {
-      title: 'Junior Web Developer',
-      company: 'StartupLab',
-      location: 'Remote',
-      period: '2020 - 2021',
+      title: 'Freelance Frontend Developer',
+      company: 'Instama',
+      companyUrl: 'https://instama.co.id',
+      location: 'Indonesia, Bandung',
+      period: '06/2020 - 12/2021',
       description: [
-        'Built and maintained web applications for various clients. Gained experience in full-stack development and agile methodologies.',
+        'Built a property management web applications for clients using HTML5, CSS3, JavaScript, PHP, CodeIgniter, and Bootstrap.',
+        'Fixed bugs and implemented new features based on client requirements.',
+        'Created and implemented a customized CSS grid system for responsive design.',
       ],
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL'],
+      technologies: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'PHP',
+        'CodeIgniter',
+        'Bootstrap',
+      ],
       image:
         'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
     },
@@ -113,9 +128,16 @@ const Experiences = () => {
                           </CardTitle>
                           <div className="flex items-center gap-2 text-muted-foreground mb-1">
                             <Briefcase size={16} />
-                            <span className="font-medium">
-                              {experience.company}
-                            </span>
+                            <a
+                              href={experience.companyUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline"
+                            >
+                              <span className="font-medium">
+                                {experience.company}
+                              </span>
+                            </a>
                           </div>
                           <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm text-muted-foreground">
                             <div className="flex items-center gap-1">
