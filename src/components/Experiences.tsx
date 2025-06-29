@@ -5,13 +5,39 @@ import { Badge } from '@/components/ui/badge';
 const Experiences = () => {
   const experiences = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
-      description:
-        'Led development of scalable web applications using React, TypeScript, and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions.',
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS'],
+      title: 'Software Engineer',
+      company: 'Xapiens Teknologi Indonesia',
+      location: 'Indonesia',
+      period: '2021 - Present',
+      description: [
+        'Developed from scratch internal service management web applications using React. Refactoring and optimizing performance through modern frontend technologies using Vite.',
+        'Maintained and enhanced existing predictive maintenance dashboard web applications, implemented new features and fixed bugs using React.',
+        'Created and maintained online learning music platform web application for global users called Muso using Next.js, React, Shadcn UI, and Tailwind CSS.',
+        'Built and maintained React project infrastructure using TypeScript and Material UI for fraud detection system web application.',
+        'Maintained and enhanced existing mobile applications using React Native, ensuring compatibility with both iOS and Android platforms.',
+        'Collaborated with cross-functional teams like designers and product managers to deliver high-quality software solutions.',
+        'Implemented responsive design and optimized performance for web applications.',
+        'Participated in code reviews and contributed to team knowledge sharing.',
+        'Wrote unit tests and performed debugging to ensure code quality.',
+      ],
+      technologies: [
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'React Native',
+        'Next.js',
+        'Bootstrap',
+        'Sass/SCSS',
+        'Tailwind CSS',
+        'Shadcn UI',
+        'Styled Components',
+        'Redux',
+        'Zustand',
+        'React Hook Form',
+        'Formik',
+        'Zod',
+        'Agile',
+      ],
       image:
         'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop',
     },
@@ -20,8 +46,9 @@ const Experiences = () => {
       company: 'Digital Innovations Inc',
       location: 'Austin, TX',
       period: '2021 - 2022',
-      description:
+      description: [
         'Developed responsive user interfaces and improved user experience across multiple web applications. Implemented modern frontend practices and optimized performance.',
+      ],
       technologies: ['React', 'Vue.js', 'Tailwind CSS', 'JavaScript'],
       image:
         'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop',
@@ -31,8 +58,9 @@ const Experiences = () => {
       company: 'StartupLab',
       location: 'Remote',
       period: '2020 - 2021',
-      description:
+      description: [
         'Built and maintained web applications for various clients. Gained experience in full-stack development and agile methodologies.',
+      ],
       technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL'],
       image:
         'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
@@ -104,9 +132,11 @@ const Experiences = () => {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
-                      {experience.description}
-                    </p>
+                    <ul className="list-disc list-outside text-muted-foreground mb-4 leading-relaxed space-y-1">
+                      {experience.description.map((item, itemIndex) => (
+                        <li key={itemIndex}>{item}</li>
+                      ))}
+                    </ul>
                     <div className="flex flex-wrap gap-2">
                       {experience.technologies.map((tech, techIndex) => (
                         <Badge
