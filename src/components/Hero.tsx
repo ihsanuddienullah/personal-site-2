@@ -32,7 +32,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Software Engineer with 4+ years experience,
+            Software engineer with 4+ years experience,
             <br />
             passionate about building scalable web and mobile applications.
             <br />
