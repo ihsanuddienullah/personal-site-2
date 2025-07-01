@@ -54,7 +54,13 @@ const Experiences = () => {
         'Provided constructive feedback and suggestions to help students improve their skills.',
         'Supported students in building their portfolios.',
       ],
-      technologies: ['JavaScript', 'React', 'Bootstrap', 'Tailwind CSS'],
+      technologies: [
+        'JavaScript',
+        'React',
+        'Sass/SCSS',
+        'Bootstrap',
+        'Tailwind CSS',
+      ],
       image:
         'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop',
     },
@@ -77,6 +83,21 @@ const Experiences = () => {
         'CodeIgniter',
         'Bootstrap',
       ],
+      image:
+        'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
+    },
+    {
+      title: 'Web Developer Internship',
+      company: 'Baramij Integrasi Teknologi',
+      companyUrl: 'https://baramijintegrasi.com',
+      location: 'Indonesia, Bandung',
+      period: '05/2019 - 08/2019',
+      description: [
+        'Developed interface designs for web applications.',
+        'Create wireframe for web applications user interface.',
+        'Create the website mockup.',
+      ],
+      technologies: ['Corel Draw', 'Photoshop', 'Figma', 'HTML5', 'CSS3'],
       image:
         'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
     },
