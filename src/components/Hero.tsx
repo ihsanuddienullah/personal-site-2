@@ -25,7 +25,9 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="block text-foreground">Hello world! I'm</span>
+            <span className="text-5xl block text-foreground">
+              Hello world! I'm
+            </span>
             <span className="block bg-gradient-to-r from-purple-600 via-blue-600 to-green-500 bg-clip-text text-transparent animate-glow">
               Muhammad Ihsanuddienullah
             </span>
