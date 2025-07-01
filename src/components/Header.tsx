@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './ThemeToggle';
+import { useTheme } from './ThemeProvider';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const { theme } = useTheme();
 
   const navItems = [
     { href: '#home', label: 'Home' },
@@ -23,15 +28,50 @@ const Header = () => {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < lastScrollY || currentScrollY < 10) {
+        // Scrolling up or at the top
+        setIsVisible(true);
+      } else {
+        // Scrolling down
+        setIsVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <header className="fixed top-0 w-full z-50 glass-effect border-b">
+    <header
+      className={`fixed top-0 w-full z-50 glass-effect border-b transition-all duration-300 ${
+        isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+      }`}
+    >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div
             className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
-            Ihsan
+            <img
+              src={
+                theme === 'dark'
+                  ? '/src/assets/ihsan_white.svg'
+                  : '/src/assets/ihsan.svg'
+              }
+              alt="Logo"
+              width={75}
+              height={75}
+            />
           </div>
 
           {/* Desktop Navigation */}
