@@ -4,11 +4,11 @@ const Skills = () => {
   const skills = [
     'HTML5',
     'CSS3',
-    'Node.js',
     'JavaScript',
     'TypeScript',
     'React',
     'React Native',
+    'Node.js',
     'Next.js',
     'Sass/SCSS',
     'Tailwind CSS',
