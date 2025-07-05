@@ -28,18 +28,21 @@ const About = () => {
           <div className="animate-fade-in">
             <h3 className="text-2xl font-semibold mb-6">My Journey</h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              I'm a software engineer with over 4 years of experience working on
-              frontend development. My journey began with a curiosity about how
-              things work on the web and passionate about client-side
-              programming especially UI design and frontend environment. It has
-              evolved into a career dedicated to crafting beautiful UI.
+              I'm a software engineer with over 4 years of experience, mostly
+              working on frontend development and sometimes on backend. My
+              journey began with a curiosity about how things work on the web
+              and a passion about client-side programming, especially the
+              frontend and UI environment. It has evolved into a career
+              dedicated to crafting beautiful UI.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               I specialize in frontend development using modern web technologies
-              including React, Next JS, and React Native using
+              including React, Next JS, Node JS, and React Native using
               JavaScript/TypeScript. I believe in writing clean, maintainable
               code and creating user experiences that are both intuitive and
-              delightful.
+              delightful. I also enjoy helping others by sharing my knowledge
+              and experience through mentoring and supporting them growing in
+              their careers.
             </p>
           </div>
 
