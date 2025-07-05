@@ -20,6 +20,7 @@ const Experiences = () => {
         'Implemented responsive design and optimized performance for web applications.',
         'Participated in code reviews and contributed to team knowledge sharing.',
         'Wrote unit tests and performed debugging to ensure code quality.',
+        'Managed service for user support and bug fixing.',
       ],
       technologies: [
         'JavaScript',
