@@ -3,6 +3,8 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './ThemeToggle';
 import { useTheme } from './ThemeProvider';
+import ihsanWhiteLogo from '@/assets/ihsan_white.svg';
+import ihsanLogo from '@/assets/ihsan.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,11 +65,7 @@ const Header = () => {
             onClick={() => scrollToSection('#home')}
           >
             <img
-              src={
-                theme === 'dark'
-                  ? '/src/assets/ihsan_white.svg'
-                  : '/src/assets/ihsan.svg'
-              }
+              src={theme === 'dark' ? ihsanWhiteLogo : ihsanLogo}
               alt="Logo"
               width={75}
               height={75}
