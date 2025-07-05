@@ -1,7 +1,10 @@
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useConfetti } from '@/hooks/useConfetti';
 
 const Hero = () => {
+  useConfetti();
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
