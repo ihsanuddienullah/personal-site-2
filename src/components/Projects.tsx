@@ -42,9 +42,9 @@ const Projects = () => {
       demo: '#',
     },
     {
-      title: 'Social Media Analytics',
+      title: 'Blockchain Portfolio Dashboard',
       description:
-        'A comprehensive analytics platform for social media metrics with interactive charts, real-time data, and export capabilities.',
+        'A decentralized finance (DeFi) dashboard for tracking cryptocurrency portfolios, transactions, and market trends using blockchain technology.',
       image:
         'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop',
       tech: ['Next.js', 'Python', 'PostgreSQL', 'Chart.js'],
@@ -62,7 +62,7 @@ const Projects = () => {
       demo: '#',
     },
     {
-      title: 'Fitness Tracker',
+      title: 'AI Fitness Tracker',
       description:
         'A comprehensive fitness tracking app with workout planning, progress monitoring, and social features for community engagement.',
       image:
