@@ -12,14 +12,14 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'AlgoEasy',
       description:
-        'A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, cart management, and payment processing.',
+        'Simple landing page for online learning platform with a focus on user experience, featuring a modern design, smooth animations, and responsive layout.',
       image:
         'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+      tech: ['JavaScript', 'React', 'Bootstrap', 'Animate.css'],
       github: '#',
-      demo: '#',
+      demo: 'https://algoeasy.vercel.app',
     },
     {
       title: 'Task Management App',
@@ -101,16 +101,6 @@ const Projects = () => {
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <Button size="sm" variant="secondary" asChild>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github size={16} className="mr-2" />
-                      Code
-                    </a>
-                  </Button>
                   <Button size="sm" asChild>
                     <a
                       href={project.demo}
