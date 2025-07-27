@@ -48,7 +48,7 @@ const Experiences = () => {
       company: 'Dibimbing Academy',
       companyUrl: 'https://dibimbing.id',
       location: 'Indonesia, Remote',
-      period: '2022 - 2025',
+      period: '2022 - 2025 (seasonal)',
       description: [
         'Mentored 20+ students per batch on JavaScript, React, and frontend development principles.',
         'Provided guidance on building a web application project from scratch using React and its ecosystem libraries.',
