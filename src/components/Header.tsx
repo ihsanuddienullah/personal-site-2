@@ -65,7 +65,7 @@ const Header = () => {
             onClick={() => scrollToSection('#home')}
           >
             <img
-              src={theme === 'dark' ? ihsanWhiteLogo : ihsanLogo}
+              src={theme === 'light' ? ihsanLogo : ihsanWhiteLogo}
               alt="Logo"
               width={75}
               height={75}
