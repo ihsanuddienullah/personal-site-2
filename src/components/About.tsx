@@ -11,31 +11,31 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+      <div className="container px-6 mx-auto">
+        <div className="mb-16 text-center animate-fade-in">
+          <h2 className="mb-4 text-4xl font-bold md:text-5xl">
             About{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-transparent bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text">
               Me
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto text-xl text-muted-foreground">
             Passionate developer with a love for creating innovative solutions
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid items-center gap-12 mb-16 lg:grid-cols-2">
           <div className="animate-fade-in">
-            <h3 className="text-2xl font-semibold mb-6">My Journey</h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              I'm a software engineer with over 4 years of experience, mostly
+            <h3 className="mb-6 text-2xl font-semibold">My Journey</h3>
+            <p className="mb-6 leading-relaxed text-muted-foreground">
+              I'm a software engineer with over 5 years of experience, mostly
               working on frontend development and sometimes on backend. My
               journey began with a curiosity about how things work on the web
               and a passion about client-side programming, especially the
               frontend and UI environment. It has evolved into a career
               dedicated to crafting beautiful UI.
             </p>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="mb-6 leading-relaxed text-muted-foreground">
               I specialize in frontend development using modern web technologies
               including React, Next JS, Node JS, and React Native using
               JavaScript/TypeScript. I believe in writing clean, maintainable
@@ -50,13 +50,13 @@ const About = () => {
             {stats.map((stat, index) => (
               <Card
                 key={index}
-                className="text-center p-6 hover:shadow-lg transition-shadow duration-300"
+                className="p-6 text-center transition-shadow duration-300 hover:shadow-lg"
               >
                 <CardContent className="p-0">
-                  <div className="text-purple-600 mb-4 flex justify-center">
+                  <div className="flex justify-center mb-4 text-purple-600">
                     {stat.icon}
                   </div>
-                  <div className="text-3xl font-bold mb-2">{stat.number}</div>
+                  <div className="mb-2 text-3xl font-bold">{stat.number}</div>
                   <div className="text-sm text-muted-foreground">
                     {stat.label}
                   </div>

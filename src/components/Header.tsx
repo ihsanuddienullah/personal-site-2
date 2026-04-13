@@ -17,7 +17,7 @@ const Header = () => {
     { href: '#home', label: 'Home' },
     { href: '#about', label: 'About' },
     { href: '#experiences', label: 'Experiences' },
-    { href: '#projects', label: 'Projects' },
+    // { href: '#projects', label: 'Projects' },
     { href: '#skills', label: 'Skills' },
     { href: '#contact', label: 'Contact' },
   ];
@@ -58,10 +58,10 @@ const Header = () => {
         isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container px-6 py-4 mx-auto">
         <div className="flex items-center justify-between">
           <div
-            className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent cursor-pointer"
+            className="text-2xl font-bold text-transparent cursor-pointer bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text"
             onClick={() => scrollToSection('#home')}
           >
             <img
@@ -73,12 +73,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="items-center hidden space-x-8 md:flex">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="font-medium transition-colors duration-300 text-foreground hover:text-primary"
               >
                 {item.label}
               </button>
@@ -88,7 +88,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Button className="px-6 py-2 font-semibold text-white transition-all duration-300 transform rounded-full shadow-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 hover:shadow-xl hover:scale-105">
                 Hire me!
               </Button>
             </a>
@@ -96,7 +96,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="flex items-center space-x-4 md:hidden">
             <ThemeToggle />
             <Button
               variant="ghost"
@@ -110,18 +110,18 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 animate-fade-in">
+          <nav className="pb-4 mt-4 md:hidden animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                  className="py-2 font-medium text-left transition-colors duration-300 text-foreground hover:text-primary"
                 >
                   {item.label}
                 </button>
               ))}
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Button className="px-6 py-2 font-semibold text-white transition-all duration-300 transform rounded-full shadow-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 hover:shadow-xl hover:scale-105">
                 Hire me!
               </Button>
             </div>
