@@ -28,21 +28,16 @@ const About = () => {
           <div className="animate-fade-in">
             <h3 className="mb-6 text-2xl font-semibold">My Journey</h3>
             <p className="mb-6 leading-relaxed text-muted-foreground">
-              I'm a software engineer with 5 years of experience, mostly working
-              on frontend development and sometimes on backend. My journey began
-              with a curiosity about how things work on the web and a passion
-              about client-side programming, especially the frontend and UI
-              environment. It has evolved into a career dedicated to crafting
-              beautiful UI.
-            </p>
-            <p className="mb-6 leading-relaxed text-muted-foreground">
-              I specialize in frontend development using modern web technologies
-              including React, Next JS, Node JS, and React Native using
-              JavaScript/TypeScript. I believe in writing clean, maintainable
-              code and creating user experiences that are both intuitive and
-              delightful. I also enjoy helping others by sharing my knowledge
-              and experience through mentoring and supporting them growing in
-              their careers.
+              I’m a Software Engineer with 5+ years of experience, focused on
+              building scalable web and mobile applications with a strong
+              frontend foundation. I specialize in React, Next.js, Node.js, and
+              React Native using JavaScript/TypeScript. I’ve built applications
+              from scratch and improved existing systems across various domains,
+              ensuring they are performant, maintainable, and user-friendly. I
+              enjoy writing clean code, collaborating with cross-functional
+              teams, and continuously learning. I also mentor aspiring
+              developers, helping them grow through hands-on guidance and
+              real-world projects.
             </p>
           </div>
 
