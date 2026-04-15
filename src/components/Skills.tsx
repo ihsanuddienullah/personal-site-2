@@ -2,14 +2,13 @@ import { Badge } from '@/components/ui/badge';
 
 const Skills = () => {
   const skills = [
-    'HTML5',
-    'CSS3',
     'JavaScript',
     'TypeScript',
     'React',
     'React Native',
-    'Node.js',
     'Next.js',
+    'Node.js',
+    'Express',
     'Sass/SCSS',
     'Tailwind CSS',
     'Bootstrap',
@@ -17,20 +16,9 @@ const Skills = () => {
     'Shadcn UI',
     'Redux',
     'Zustand',
-    'React Hook Form',
-    'Formik',
-    'Zod',
-    'Git',
     'Webpack',
     'Vite',
-    'CI/CD',
     'Jest',
-    'Testing',
-    'Responsive Design',
-    'Mobile-First Design',
-    'Accessibility',
-    'Prototyping',
-    'Wireframing',
   ];
 
   return (
