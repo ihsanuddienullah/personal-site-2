@@ -12,16 +12,21 @@ const Experiences = () => {
       location: 'Indonesia, Remote',
       period: '03/2021 - Present',
       description: [
-        'Developed from scratch an internal service management web application using React. Refactoring and optimizing performance through modern frontend technologies using Vite and integrating with Restful APIs.',
-        'Maintained and enhanced existing predictive maintenance dashboard and charity web application, developed new features and resolved bugs using React.',
-        'Created and maintained an online learning music platform web application for global users called Muso using Next.js, React, Shadcn UI, Tailwind CSS, and integrating with GraphQL.',
-        'Built and maintained React project infrastructure using TypeScript and Material UI for a fraud detection system web application.',
-        'Maintained and enhanced existing mobile applications using React Native, ensuring compatibility with both iOS and Android platforms.',
-        'Collaborated with cross-functional teams like designers and product managers to deliver high-quality software solutions. Gained experience in agile methodologies.',
-        'Implemented responsive design and optimized performance for web applications.',
-        'Participated in code reviews and contributed to team knowledge sharing.',
-        'Wrote unit tests and performed debugging to ensure code quality.',
-        'Managed service for user support and bug fixing.',
+        'Led the frontend architecture and development of an internal service management platform from the ground up using React, successfully migrating a legacy codebase to Vite and integrating RESTful APIs, resulting in significantly faster build times and improved application performance.',
+        'Optimized frontend search functionality for large-scale datasets by redesigning data fetching and rendering strategies, reducing search response times by approximately 70% and improving overall user productivity.',
+        'Collaborated closely with product managers, UI/UX designers, and backend engineers in Agile environments, conducting peer code reviews, implementing unit testing practices, and ensuring high-quality, maintainable code delivery.',
+        'Engineered and launched musomethod.app, a global online music learning platform built with Next.js, GraphQL, TypeScript, Tailwind CSS, and Shadcn UI, delivering a highly responsive and scalable user experience for international users.',
+        'Developed and maintained a fraud detection platform using TypeScript and Material UI, establishing a type-safe frontend architecture that improved code reliability, consistency, and long-term maintainability.',
+        'Maintained and enhanced cross-platform mobile applications for iOS and Android using React Native, delivering critical bug fixes and continuous feature improvements while ensuring stable production performance.',
+        'Standardized frontend dependencies, development environments, and versioning practices across projects, improving team collaboration, reducing environment-related issues, and ensuring alignment between development, staging, and production environments.',
+        'Leveraged AI-assisted development tools to accelerate debugging, code analysis, and complex refactoring initiatives, reducing bug investigation and resolution time by up to 50% while improving engineering efficiency.',
+      ],
+      achievements: [
+        'Achieved and maintained a 0% critical production error rate by proactively identifying issues, strengthening QA processes, and implementing robust frontend validation and testing practices.',
+        'Reduced frontend search feature processing time by approximately 70%, significantly improving responsiveness and user experience across data-intensive applications.',
+        'Standardized project version management, dependencies, and documentation across multiple environments, minimizing deployment inconsistencies and accelerating onboarding for new developers.',
+        'Improved application stability and code quality, contributing to a measurable reduction in reported system errors and user-facing issues over multiple product releases.',
+        'Accelerated bug resolution workflows by 35-50% through the adoption of AI-powered debugging and development tools, enabling faster feature delivery and maintenance cycles.',
       ],
       technologies: [
         'JavaScript',
@@ -51,10 +56,17 @@ const Experiences = () => {
       location: 'Indonesia, Remote',
       period: '2022 - 2025 (seasonal)',
       description: [
-        'Mentored 20+ students per batch on JavaScript, React, and frontend development principles.',
-        'Provided guidance on building a web application project from scratch using React and its ecosystem libraries.',
-        'Provided constructive feedback and suggestions to help students improve their skills.',
-        'Supported students in building their portfolios.',
+        'Mentored 20+ students per cohort from diverse educational and professional backgrounds in JavaScript, React, and modern frontend development practices.',
+        'Designed and delivered structured learning programs covering frontend fundamentals, component-based architecture, state management, API integration, and industry-standard development workflows.',
+        'Guided students through the end-to-end development lifecycle, enabling them to build production-ready web applications using React and its ecosystem from concept to deployment.',
+        'Provided personalized code reviews, technical consultations, and career mentoring sessions, helping students improve problem-solving skills, coding standards, and software engineering best practices.',
+        'Supported students in developing professional portfolios and real-world projects.',
+        'Simplified complex technical concepts into practical and easy-to-understand learning experiences, resulting in consistently high student engagement and learning outcomes.',
+      ],
+      achievements: [
+        'Consistently recognized as one of the highest-rated mentors, achieving an average mentor satisfaction score of 4.8/5 based on student evaluations.',
+        'Maintained consistently high student satisfaction scores through clear communication, hands-on mentoring, and effective technical guidance.',
+        'Contributed to improving student completion rates and project quality by providing structured feedback, technical troubleshooting, and personalized learning support.',
       ],
       technologies: [
         'JavaScript',
@@ -73,9 +85,13 @@ const Experiences = () => {
       location: 'Indonesia, Bandung',
       period: '06/2020 - 12/2021',
       description: [
-        'Built a property management web application for clients using HTML5, CSS3, JavaScript, PHP, CodeIgniter, and Bootstrap.',
-        'Fixed bugs and implemented new features based on client requirements.',
-        'Created and implemented a customized CSS grid system for responsive design.',
+        'Developed a responsive property management web application for client operations using HTML5, CSS3, JavaScript, PHP, CodeIgniter, and Bootstrap.',
+        'Collaborated directly with stakeholders to gather requirements, translate business needs into technical solutions, and deliver features aligned with project objectives and timelines.',
+        'Designed and implemented a custom CSS grid system to improve responsiveness across desktop, tablet, and mobile devices, ensuring a consistent user experience on multiple screen sizes.',
+        'Worked closely with backend developers to integrate application interfaces with server-side functionality and optimize data presentation for end users.',
+      ],
+      achievements: [
+        'Improved cross-device compatibility and responsive behavior by implementing a customized grid system, reducing UI inconsistencies across major screen resolutions.',
       ],
       technologies: [
         'HTML5',
@@ -95,9 +111,13 @@ const Experiences = () => {
       location: 'Indonesia, Bandung',
       period: '05/2019 - 08/2019',
       description: [
-        'Developed interface designs for web a application.',
-        'Create a wireframe for a web application user interface.',
-        'Create the website mockup.',
+        'Collaborated with the development team to design user-friendly web application interfaces.',
+        'Created wireframes and user flow diagrams to define application structure, navigation, and functionality before development.',
+        'Designed high-fidelity website mockups and UI prototypes that served as visual references for developers and stakeholders throughout the development.',
+        'Applied responsive design principles and modern UI/UX practices to create consistent experiences across desktop and mobile devices.',
+      ],
+      achievements: [
+        'Delivered multiple wireframes and UI mockups that were successfully adopted as the foundation for web application development projects.',
       ],
       technologies: ['Corel Draw', 'Photoshop', 'Figma', 'HTML5', 'CSS3'],
       image:
@@ -170,6 +190,12 @@ const Experiences = () => {
                   <CardContent>
                     <ul className="list-disc list-outside text-muted-foreground mb-4 leading-relaxed space-y-1">
                       {experience.description.map((item, itemIndex) => (
+                        <li key={itemIndex}>{item}</li>
+                      ))}
+                    </ul>
+                    <p className="mb-2 font-medium text-foreground">Key Achievements</p>
+                    <ul className="list-disc list-outside text-muted-foreground mb-4 leading-relaxed space-y-1">
+                      {experience.achievements.map((item, itemIndex) => (
                         <li key={itemIndex}>{item}</li>
                       ))}
                     </ul>
