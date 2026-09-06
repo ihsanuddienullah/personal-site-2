@@ -1,5 +1,6 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import AnimatedIhsanLogo from '@/components/AnimatedIhsanLogo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,13 +9,8 @@ const Footer = () => {
     <footer className="border-t border-[#42ff87]/15 bg-[#000000] py-12 font-mono">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-          <div className="text-center md:text-left">
-            <div className="mb-2 font-mono text-xl font-semibold tracking-tight text-[#42ff87]">
-              Muhammad Ihsanuddienullah
-            </div>
-            <p className="text-xs uppercase tracking-[.18em] text-muted-foreground">
-              Software Engineer // system.online
-            </p>
+          <div className="flex items-center justify-center md:justify-start">
+            <AnimatedIhsanLogo />
           </div>
 
           <div className="flex space-x-4">
