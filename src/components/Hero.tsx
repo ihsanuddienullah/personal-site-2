@@ -92,7 +92,7 @@ const Hero = () => {
                 className="server-art w-full max-w-none opacity-55"
               />
             </div>
-            <div className="code-window absolute left-0 top-1/2 w-full -translate-y-1/2 overflow-hidden border border-[#42ff87]/25 bg-black/80 shadow-[0_0_80px_rgba(66,255,135,.08)] backdrop-blur-md transition-transform duration-500 sm:left-auto sm:right-[14%] sm:w-[80%] lg:rotate-[1.75deg] lg:hover:rotate-[.5deg]">
+            <div className="code-window absolute left-0 top-1/2 w-full -translate-y-1/2 overflow-hidden border border-[#42ff87]/25 bg-black/70 shadow-[0_0_80px_rgba(66,255,135,.08)] backdrop-blur-sm transition-transform duration-500 sm:left-auto sm:right-[14%] sm:w-[80%] lg:rotate-[1.75deg] lg:hover:rotate-[.5deg]">
               <div className="flex h-10 items-center justify-between border-b border-[#42ff87]/15 bg-[#071009]/90 px-4 font-mono text-[10px] text-zinc-600">
                 <div className="flex gap-1.5">
                   <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
