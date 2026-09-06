@@ -1,9 +1,20 @@
-import { Calendar, MapPin, Briefcase } from 'lucide-react';
+import { useState } from 'react';
+import { Calendar, MapPin, Briefcase, ChevronDown } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import SectionTitle from '@/components/SectionTitle';
 
 const Experiences = () => {
+  const [expandedItems, setExpandedItems] = useState<number[]>([]);
+
+  const toggleExpanded = (index: number) => {
+    setExpandedItems((items) =>
+      items.includes(index)
+        ? items.filter((item) => item !== index)
+        : [...items, index]
+    );
+  };
+
   const experiences = [
     {
       title: 'Software Engineer',
@@ -144,7 +155,10 @@ const Experiences = () => {
         <div className="max-w-4xl mx-auto relative">
           <div className="absolute bottom-0 left-8 top-0 hidden w-px bg-gradient-to-b from-[#42ff87] via-[#42ff87]/30 to-transparent md:block"></div>
 
-          {experiences.map((experience, index) => (
+          {experiences.map((experience, index) => {
+            const isExpanded = expandedItems.includes(index);
+
+            return (
             <div key={index} className="relative mb-12 last:mb-0">
               <div className="absolute left-[1.62rem] top-8 z-10 hidden h-3 w-3 border-2 border-black bg-[#42ff87] shadow-[0_0_16px_#42ff87] md:block"></div>
               <div className="md:ml-16">
@@ -188,17 +202,40 @@ const Experiences = () => {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <ul className="list-disc list-outside text-muted-foreground mb-4 leading-relaxed space-y-1">
-                      {experience.description.map((item, itemIndex) => (
+                    <ul className="mb-3 list-outside list-disc space-y-1 pl-5 text-muted-foreground leading-relaxed">
+                      {experience.description.slice(0, 2).map((item, itemIndex) => (
                         <li key={itemIndex}>{item}</li>
                       ))}
                     </ul>
-                    <p className="mb-2 font-medium text-foreground">Key Achievements</p>
-                    <ul className="list-disc list-outside text-muted-foreground mb-4 leading-relaxed space-y-1">
-                      {experience.achievements.map((item, itemIndex) => (
-                        <li key={itemIndex}>{item}</li>
-                      ))}
-                    </ul>
+
+                    <div id={`experience-details-${index}`} className={`experience-details ${isExpanded ? 'is-expanded' : ''}`}>
+                      <div>
+                        {experience.description.length > 2 && (
+                          <ul className="mb-4 list-outside list-disc space-y-1 pl-5 text-muted-foreground leading-relaxed">
+                            {experience.description.slice(2).map((item, itemIndex) => (
+                              <li key={itemIndex}>{item}</li>
+                            ))}
+                          </ul>
+                        )}
+                        <p className="mb-2 font-medium text-foreground">Key Achievements</p>
+                        <ul className="mb-4 list-outside list-disc space-y-1 pl-5 text-muted-foreground leading-relaxed">
+                          {experience.achievements.map((item, itemIndex) => (
+                            <li key={itemIndex}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => toggleExpanded(index)}
+                      aria-expanded={isExpanded}
+                      aria-controls={`experience-details-${index}`}
+                      className="mb-5 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.16em] text-[#ffb000] transition-colors hover:text-white"
+                    >
+                      {isExpanded ? 'Read less' : 'Read more'}
+                      <ChevronDown size={14} className={`transition-transform duration-500 ${isExpanded ? 'rotate-180' : ''}`} />
+                    </button>
                     <div className="flex flex-wrap gap-2">
                       {experience.technologies.map((tech, techIndex) => (
                         <Badge
@@ -214,7 +251,8 @@ const Experiences = () => {
                 </Card>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
