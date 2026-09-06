@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Award, Code, Coffee, Heart } from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
 
 const About = () => {
   const [activeCard, setActiveCard] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
   const stats = [
     {
       icon: <Heart size={26} />,
@@ -34,8 +35,55 @@ const About = () => {
   const showNextCard = () =>
     setActiveCard((current) => (current + 1) % stats.length);
 
+  useEffect(() => {
+    let animationFrame = 0;
+
+    const updateCardFromScroll = () => {
+      animationFrame = 0;
+      const section = sectionRef.current;
+      if (!section) return;
+
+      const usesPinnedLayout = window.matchMedia('(min-width: 1024px)').matches;
+      if (!usesPinnedLayout) return;
+
+      const rect = section.getBoundingClientRect();
+      const scrollableDistance = Math.max(1, rect.height - window.innerHeight);
+      const progress = Math.min(
+        1,
+        Math.max(0, -rect.top / scrollableDistance)
+      );
+      const nextCard = Math.min(
+        stats.length - 1,
+        Math.floor(progress * stats.length)
+      );
+
+      setActiveCard((current) => current === nextCard ? current : nextCard);
+    };
+
+    const handleScroll = () => {
+      if (!animationFrame) {
+        animationFrame = window.requestAnimationFrame(updateCardFromScroll);
+      }
+    };
+
+    updateCardFromScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+    };
+  }, [stats.length]);
+
   return (
-    <section id="about" className="section-shell">
+    <section
+      ref={sectionRef}
+      id="about"
+      className="section-shell about-scroll-section"
+    >
+      <div className="about-sticky">
       <div className="container mx-auto px-6">
         <div className="section-heading animate-fade-in">
           <SectionTitle>
@@ -65,7 +113,8 @@ const About = () => {
             </p>
           </div>
 
-          <div className="animate-slide-in-right">
+          <div className="about-card-stage animate-slide-in-right">
+            <div className="about-card-sticky">
             <div
               className="stat-stack relative mx-auto h-[390px] w-full max-w-[520px]"
               aria-label="Developer statistics card stack"
@@ -108,11 +157,14 @@ const About = () => {
               })}
             </div>
             <p className="mt-1 text-center font-mono text-[9px] uppercase tracking-[.2em] text-zinc-700">
-              <span className="mr-2 text-[#42ff87]">↗</span>Click the front card
-              to cycle
+              <span className="mr-2 text-[#42ff87]">↕</span>
+              <span className="hidden lg:inline">Scroll to cycle · click the front card</span>
+              <span className="lg:hidden">Tap the front card to cycle</span>
             </p>
+            </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
