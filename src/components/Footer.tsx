@@ -12,7 +12,9 @@ const Footer = () => {
             <div className="mb-2 font-mono text-xl font-semibold tracking-tight text-[#42ff87]">
               Muhammad Ihsanuddienullah
             </div>
-            <p className="text-xs uppercase tracking-[.18em] text-muted-foreground">Software Engineer // system.online</p>
+            <p className="text-xs uppercase tracking-[.18em] text-muted-foreground">
+              Software Engineer // system.online
+            </p>
           </div>
 
           <div className="flex space-x-4">
@@ -24,7 +26,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:text-[#42ff87]"
+                className="text-zinc-500 transition-colors hover:text-white"
               >
                 <Github size={24} />
               </Button>
@@ -37,7 +39,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:text-[#42ff87]"
+                className="text-zinc-500 transition-colors hover:text-[#0a66c2]"
               >
                 <Linkedin size={24} />
               </Button>
@@ -50,7 +52,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:text-[#42ff87]"
+                className="text-zinc-500 transition-colors hover:text-[#ffb000]"
               >
                 <Mail size={24} />
               </Button>

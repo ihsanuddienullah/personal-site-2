@@ -28,7 +28,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="relative z-30 inline-flex p-1 hover:text-[#42ff87]"
+              className="relative z-30 inline-flex p-1 transition-colors hover:text-white"
             >
               <Github size={17} />
             </a>
@@ -37,7 +37,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="relative z-30 inline-flex p-1 hover:text-[#42ff87]"
+              className="relative z-30 inline-flex p-1 transition-colors hover:text-[#0a66c2]"
             >
               <Linkedin size={17} />
             </a>
