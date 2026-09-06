@@ -17,18 +17,18 @@ const Hero = () => {
         aria-hidden="true"
       />
       <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-5rem)] flex-col px-6 py-6">
-        <div className="mb-5 flex items-center justify-between border-b border-[#42ff87]/20 pb-3 font-mono text-[10px] uppercase tracking-[.22em] text-zinc-600">
+        <div className="relative z-30 mb-5 flex items-center justify-between border-b border-[#42ff87]/20 pb-3 font-mono text-[10px] uppercase tracking-[.22em] text-zinc-600">
           <span>
             <i className="status-dot mr-3 inline-block" />
             system.online
           </span>
-          <div className="flex gap-4 text-zinc-600">
+          <div className="flex items-center gap-4 text-zinc-600">
             <a
               href="https://www.github.com/ihsanuddienullah/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="hover:text-[#42ff87]"
+              className="relative z-30 inline-flex p-1 hover:text-[#42ff87]"
             >
               <Github size={17} />
             </a>
@@ -37,14 +37,14 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hover:text-[#42ff87]"
+              className="relative z-30 inline-flex p-1 hover:text-[#42ff87]"
             >
               <Linkedin size={17} />
             </a>
             <a
               href="mailto:ihsanuddienullah@gmail.com"
               aria-label="Email"
-              className="hover:text-[#ffb000]"
+              className="relative z-30 inline-flex p-1 hover:text-[#ffb000]"
             >
               <Mail size={17} />
             </a>
@@ -85,14 +85,14 @@ const Hero = () => {
             </div>
           </div>
           <div className="relative min-h-[440px] lg:min-h-[520px]">
-            <div className="absolute left-1/2 top-1/2 w-[min(620px,115%)] -translate-x-1/2 -translate-y-1/2">
+            <div className="pointer-events-none absolute left-1/2 top-1/2 w-[min(620px,115%)] -translate-x-1/2 -translate-y-1/2 select-none lg:left-[46%]" aria-hidden="true">
               <img
                 src={serverNodes}
-                alt="Isometric server infrastructure"
+                alt=""
                 className="server-art w-full max-w-none opacity-55"
               />
             </div>
-            <div className="code-window absolute left-0 top-1/2 w-full -translate-y-1/2 overflow-hidden border border-[#42ff87]/25 bg-black/80 shadow-[0_0_80px_rgba(66,255,135,.08)] backdrop-blur-md transition-transform duration-500 sm:left-auto sm:right-0 sm:w-[92%] lg:rotate-[1.75deg] lg:hover:rotate-[.5deg]">
+            <div className="code-window absolute left-0 top-1/2 w-full -translate-y-1/2 overflow-hidden border border-[#42ff87]/25 bg-black/80 shadow-[0_0_80px_rgba(66,255,135,.08)] backdrop-blur-md transition-transform duration-500 sm:left-auto sm:right-[14%] sm:w-[80%] lg:rotate-[1.75deg] lg:hover:rotate-[.5deg]">
               <div className="flex h-10 items-center justify-between border-b border-[#42ff87]/15 bg-[#071009]/90 px-4 font-mono text-[10px] text-zinc-600">
                 <div className="flex gap-1.5">
                   <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
