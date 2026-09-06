@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import SectionTitle from '@/components/SectionTitle';
 
 const Projects = () => {
   const projects = [
@@ -74,33 +75,33 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
+    <section id="projects" className="section-shell section-tinted">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="section-heading animate-fade-in">
+          <SectionTitle>
             Featured{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-[#eaff00]">
               Projects
             </span>
-          </h2>
+          </SectionTitle>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A showcase of my recent work and side projects
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid auto-rows-[minmax(320px,auto)] gap-5 md:grid-cols-2 lg:grid-cols-12">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in"
+              className={`surface-card group overflow-hidden transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:border-[#eaff00] ${index === 0 || index === 3 ? 'lg:col-span-7' : 'lg:col-span-5'}`}
             >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="h-52 w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                <div className="absolute inset-0 flex items-center justify-center space-x-4 bg-[#eaff00]/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <Button size="sm" asChild>
                     <a
                       href={project.demo}
@@ -115,7 +116,7 @@ const Projects = () => {
               </div>
 
               <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">
+                <CardTitle className="transition-colors group-hover:text-[#eaff00]">
                   {project.title}
                 </CardTitle>
                 <CardDescription className="line-clamp-3">
@@ -129,7 +130,7 @@ const Projects = () => {
                     <Badge
                       key={techIndex}
                       variant="outline"
-                      className="text-xs"
+                      className="rounded-none border-white/20 bg-transparent font-mono text-xs"
                     >
                       {tech}
                     </Badge>

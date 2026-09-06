@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import SectionTitle from '@/components/SectionTitle';
 
 const Skills = () => {
   const skills = [
@@ -22,29 +23,27 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="section-shell">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Skills &{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Expertise
-            </span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <div className="section-heading animate-fade-in">
+          <SectionTitle>
+            Tech <span className="text-[#42ff87]">Stack</span>
+          </SectionTitle>
+          <p className="section-kicker">03 / stack.json</p>
+          <p className="max-w-2xl text-lg text-muted-foreground">
             Technologies and tools I use to bring ideas to life
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {skills.map((skill, index) => (
             <Badge
               key={index}
               variant="secondary"
-              className="cursor-pointer text-sm px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-colors duration-200 animate-fade-in"
+              className="animate-fade-in cursor-pointer justify-start rounded-none border border-[#42ff87]/10 bg-[#030604]/90 px-4 py-6 font-mono text-[11px] text-zinc-500 shadow-[inset_0_1px_0_rgba(66,255,135,.025)] transition-all duration-300 hover:-translate-y-1 hover:border-[#42ff87]/45 hover:bg-[#42ff87]/5 hover:text-[#42ff87]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {skill}
+              <span className="mr-2 text-[#42ff87]/40">{String(index + 1).padStart(2, '0')}</span>{skill}
             </Badge>
           ))}
         </div>

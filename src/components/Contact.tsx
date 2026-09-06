@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import SectionTitle from '@/components/SectionTitle';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -63,30 +64,29 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="section-shell section-tinted">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="section-heading animate-fade-in">
+          <SectionTitle>
             Get In{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-[#42ff87]">
               Touch
             </span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          </SectionTitle>
+          <p className="section-kicker">04 / initiate_handshake.sh</p>
+          <p className="max-w-2xl text-lg text-muted-foreground">
             Let's work together to bring your ideas to life
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="animate-fade-in">
-            <h3 className="text-2xl font-semibold mb-8">
-              Let's talk about your project
-            </h3>
+            <h3 className="mb-8 font-mono text-xl font-semibold text-[#ffb000]">$ ./start-a-conversation</h3>
 
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center space-x-4">
-                  <div className="text-purple-600">{info.icon}</div>
+                  <div className="border border-[#ffb000]/30 bg-[#ffb000]/[.05] p-3 text-[#ffb000]">{info.icon}</div>
                   <div>
                     <h4 className="font-medium">{info.title}</h4>
                     <a
@@ -108,7 +108,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <Card className="animate-slide-in-right">
+          <Card className="surface-card animate-slide-in-right p-2 sm:p-4">
             <CardHeader>
               <CardTitle>Send me a message</CardTitle>
             </CardHeader>
@@ -170,7 +170,7 @@ const Contact = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                  className="h-12 w-full rounded-xl bg-[#42ff87] text-xs font-semibold uppercase tracking-wider text-slate-950 shadow-[0_0_30px_rgba(84,215,255,.18)] hover:bg-[#9be9ff]"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (

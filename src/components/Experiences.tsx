@@ -1,6 +1,7 @@
 import { Calendar, MapPin, Briefcase } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import SectionTitle from '@/components/SectionTitle';
 
 const Experiences = () => {
   const experiences = [
@@ -105,45 +106,36 @@ const Experiences = () => {
   ];
 
   return (
-    <section id="experiences" className="py-20 bg-muted/30">
+    <section id="experiences" className="section-shell section-tinted">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="section-heading animate-fade-in">
+          <SectionTitle>
             Work{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-[#42ff87]">
               Experience
             </span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          </SectionTitle>
+          <p className="section-kicker">02 / git.log --career</p>
+          <p className="max-w-2xl text-lg text-muted-foreground">
             My professional journey and key contributions
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-600 to-blue-600 hidden md:block"></div>
+          <div className="absolute bottom-0 left-8 top-0 hidden w-px bg-gradient-to-b from-[#42ff87] via-[#42ff87]/30 to-transparent md:block"></div>
 
           {experiences.map((experience, index) => (
             <div key={index} className="relative mb-12 last:mb-0">
-              {/* Timeline dot */}
-              <div className="absolute left-6 top-8 w-4 h-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full border-4 border-background z-10 hidden md:block"></div>
-
-              {/* Experience card */}
+              <div className="absolute left-[1.62rem] top-8 z-10 hidden h-3 w-3 border-2 border-black bg-[#42ff87] shadow-[0_0_16px_#42ff87] md:block"></div>
               <div className="md:ml-16">
                 <Card
-                  className="hover:shadow-lg transition-all duration-300 animate-fade-in"
+                  className="surface-card animate-fade-in transition-all duration-300 hover:border-[#42ff87]/35"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div className="flex items-start gap-4">
-                        <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-                          <img
-                            src={experience.image}
-                            alt={experience.company}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center border border-[#ffb000]/30 bg-[#ffb000]/5 font-mono text-xs text-[#ffb000]">0{index + 1}</div>
                         <div>
                           <CardTitle className="text-xl mb-2">
                             {experience.title}
@@ -186,7 +178,7 @@ const Experiences = () => {
                         <Badge
                           key={techIndex}
                           variant="secondary"
-                          className="text-xs"
+                          className="rounded-none border border-[#42ff87]/15 bg-[#42ff87]/5 font-mono text-[10px] text-[#42ff87]/70"
                         >
                           {tech}
                         </Badge>

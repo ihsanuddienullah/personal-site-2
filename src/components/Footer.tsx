@@ -5,14 +5,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 border-t bg-muted/30">
+    <footer className="border-t border-[#42ff87]/15 bg-[#000000] py-12 font-mono">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-center md:text-left">
-            <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+            <div className="mb-2 font-mono text-xl font-semibold tracking-tight text-[#42ff87]">
               Muhammad Ihsanuddienullah
             </div>
-            <p className="text-muted-foreground">Software Engineer</p>
+            <p className="text-xs uppercase tracking-[.18em] text-muted-foreground">Software Engineer // system.online</p>
           </div>
 
           <div className="flex space-x-4">
@@ -24,7 +24,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:text-purple-600"
+                className="hover:text-[#42ff87]"
               >
                 <Github size={24} />
               </Button>
@@ -37,7 +37,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:text-blue-600"
+                className="hover:text-[#42ff87]"
               >
                 <Linkedin size={24} />
               </Button>
@@ -50,7 +50,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:text-green-600"
+                className="hover:text-[#42ff87]"
               >
                 <Mail size={24} />
               </Button>
